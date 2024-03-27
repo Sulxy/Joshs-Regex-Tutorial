@@ -1,4 +1,21 @@
-# Regex Tutorial Starter Code
+# URL-Regex-Explained
+
+## Description
+
+In this URL-Regex-Tutorial, you will learn how to validate the URL regular expression (regex). 
+The URL regex is made up of the following components:(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/).
+Upon completion of this tutorial, you should have an elevated understanding of how the URL regex functions, and a deeper knowledge of its parts.
+
+[Github Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a).
+
+
+## Table of Contents:
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Usage Instructions](#usage-instructions)
+- [Github Gist](#github-gist)
+- [Author](#author)
+
 
 ## User Story
 AS A web development student
@@ -15,3 +32,19 @@ WHEN I read through each section of the tutorial
 THEN I find a detailed explanation of what a specific component of the regex does
 WHEN I reach the end of the tutorial
 THEN I find a section about the author and a link to the author’s GitHub profile
+
+## Usage Instructions
+
+1. Go to the Github Gist link below
+2. Read and enjoy the Gist
+3. Apply newfound knowledge 
+
+## Github Gist
+
+[Github Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a).
+
+## Author
+
+Hello! My name is Joshua, and I am a student currently with the University of Texas at San Antonio's Coding Bootcamp. 
+[Deployed Github-Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a). 
+Follow me on Github at [Sulxy](https://github.com/Sulxy), or reachout to me at Joshuahale829@gmail.com
