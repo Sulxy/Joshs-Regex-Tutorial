@@ -12,14 +12,11 @@ Going forward, we will go over the make up of each component that creates a read
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
+- [Character Classes/Bracket Expressions](#character-classes/bracket-expressions)
 - [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Author](#author)
 
 ## Regex Components
 
@@ -52,7 +49,7 @@ This operator is represented by ([ and ]). It allows us to have multiple alterna
 
 This kind of URL structure allows for alternatives within sections of the URL, and allows the for flexibility without having to list out every possible scenario. 
 
-### Character Classes
+### Character Classes/Bracket Expressions
 
 Character classes can be explained by creating two camps: 
 
@@ -63,20 +60,6 @@ These camps help the regex understand which characters are allowed in a certain 
 
     /: allows the use of a forward slash.
     \w: allows the use of any word character. 
-
-### Flags
-
-Flags can be thought of like switches that change how the regex works. These flags allow the regex to search more effectively. 
-These flags are not present within the URL regex, and are not required for the URL regex's intended purpose.  
-However, there are 7 types of Flags:
-
-    Case Insensitive: (i) This tells the regex to ignore whether letters are capitalized or not. 
-    Global: (g) This tells the regex to find all matches within a text, and to not stop after the first one is found. 
-    Multi-line: (m) This changes the behavior of the regex, and splits the text into several times; each line beginning with '^' and ending with '$'. 
-    Unicode: (u) This allows for unicode support, and brings unicode characters into the mix. 
-    Sticky: (y) This requires that a match start at the 'lastIndex' property of an input string. 
-    Dot All: (s) This changes the behavior if the '.', so that it matches any character. 
-    Verbose: (x) This allows the regex to be more readable by ignoring whitespace and comments. 
 
 ### Grouping and Capturing
 
@@ -91,28 +74,27 @@ Groups are locked between parenthese (), and in this case, there are 5 groups to
 
 This process helps to organize the different components of a URL, improves readability, and makes it easier to change them need be. 
 
-### Bracket Expressions
-
-In the case of the URL regex, Bracket Expressions and Character Classes are the same thing, but I will sum it up really quick. 
-
-These are used to define sets of characters that can match a single character within a string. 
-
-    Examples:
-        [\da-z.-]: This character class specifies that any digit (d), any lowercase letter (a-z), periods (.), and hyphens (-) are valid characters. 
-        [a-z.]: This character class specifies that any lowercase letter (a-z), and periods (.). 
-
-These Bracket Expressions/Character Classes help validate certain types of character in the URL. Consider these contraints as filters that only allow certain types of characters through. 
-
 ### Greedy and Lazy Match
 
+"Greedy" and "Lazy" matching refer to how quantifiers behave when matching patterns in the input string. 
 
+    Greedy Match: This means that sometimes the quantifiers try to match up with as many characters as possible, potentially matching with more characters than necessary. By default, quantifiers are "greedy". 
+    Lazy Match: This means that if you follow a quantifier with a '?', it will make it lazy. Meaning that it will try to match with as few characters as possible while still following the rules of the regex. None of the quantifiers are lazy by default, they must be made that way. 
+
+Greedy quantifiers are required by default, because URLs can vary in length and complexity. The regex needs to match as much as the URL as possible to identify the URL. This helps to allows the regex to identify URLs even if they contain more characters than necessary. 
 
 ### Boundaries
 
-### Back-references
+Boundaries are used to specify the edges where a pattern can match in the input string. The URL regex does not use explicit boundaries, such as '\b' or '\B'. 
+It does, however, use  implicit boundaries to specify the beginning and end of a URL pattern. 
 
-### Look-ahead and Look-behind
+    The '^' symbol symbolizes the start of a string. It acts the first boundary, indicating that a pattern must match from here forward, until...
+    The '$' symbol symbolizes the end of a string. It acts as the last boundary, indicating that a pattern much match until it reaches this symbol. 
+
+These implicit boundaries help ensure that the regex pattern matches URLs that are standalone. By anchoring the first and last part of a string, the regex is able to accurately identify complete URLs while simultaneously ignoring extra characters and partial matches.  
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Hello! My name is Joshua, and I am a student currently with the University of Texas at San Antonio's Coding Bootcamp. 
+[Deployed Github-Gist](PUT LINK HERE). 
+Follow me on Github at [Sulxy](https://github.com/Sulxy), or reachout to me at Joshuahale829@gmail.com
