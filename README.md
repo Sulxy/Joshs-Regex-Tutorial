@@ -41,7 +41,7 @@ THEN I find a section about the author and a link to the author’s GitHub profi
 
 ## Github Gist
 
-[Github Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a).
+[Github Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a)
 
 ## Author
 
