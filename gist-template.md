@@ -66,11 +66,46 @@ These camps help the regex understand which characters are allowed in a certain 
 
 ### Flags
 
+Flags can be thought of like switches that change how the regex works. These flags allow the regex to search more effectively. 
+These flags are not present within the URL regex, and are not required for the URL regex's intended purpose.  
+However, there are 7 types of Flags:
+
+    Case Insensitive: (i) This tells the regex to ignore whether letters are capitalized or not. 
+    Global: (g) This tells the regex to find all matches within a text, and to not stop after the first one is found. 
+    Multi-line: (m) This changes the behavior of the regex, and splits the text into several times; each line beginning with '^' and ending with '$'. 
+    Unicode: (u) This allows for unicode support, and brings unicode characters into the mix. 
+    Sticky: (y) This requires that a match start at the 'lastIndex' property of an input string. 
+    Dot All: (s) This changes the behavior if the '.', so that it matches any character. 
+    Verbose: (x) This allows the regex to be more readable by ignoring whitespace and comments. 
+
 ### Grouping and Capturing
+
+Grouping and Capturing is used to isolate and extract specific parts of the URL.  
+Groups are locked between parenthese (), and in this case, there are 5 groups to be captured.
+
+    (https?:\/\/)?: This group captures the the optional http/https scheme. 
+    ([\da-z\.-]+): This group captures domain name, which is digits (0-9), lowercase letters (a-z), periods (.), and hyphens (-).
+    ([a-z\.]{2,6}): This group captures the TLD (Top-Level Domain), which consists of lowercase letter (a-z), periods (.), and a length between 2 and 6 characters (.com, .org, etc). 
+    ([\/\w \.-]*)*: This group captures the optional path component of the URL, which includes any slash (\/), word characters, spaces ( ), periods (.), and hyphens (-).
+    \/?$: This group captures the optional trailing slashes (\/) at the end of a URL. 
+
+This process helps to organize the different components of a URL, improves readability, and makes it easier to change them need be. 
 
 ### Bracket Expressions
 
+In the case of the URL regex, Bracket Expressions and Character Classes are the same thing, but I will sum it up really quick. 
+
+These are used to define sets of characters that can match a single character within a string. 
+
+    Examples:
+        [\da-z.-]: This character class specifies that any digit (d), any lowercase letter (a-z), periods (.), and hyphens (-) are valid characters. 
+        [a-z.]: This character class specifies that any lowercase letter (a-z), and periods (.). 
+
+These Bracket Expressions/Character Classes help validate certain types of character in the URL. Consider these contraints as filters that only allow certain types of characters through. 
+
 ### Greedy and Lazy Match
+
+
 
 ### Boundaries
 
