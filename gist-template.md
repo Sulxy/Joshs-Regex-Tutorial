@@ -1,13 +1,14 @@
-# Title (replace with your title)
+# Understanding and Explaining the Regular Expression for Matching URLs 
 
-Introductory paragraph (replace this with your text)
+Have you ever wondered how websites check for a valid web addres? They use regular expressions for this, which are basically just fancy search patterns. In this guide, we will break down the URL regex, which is specifically built to recognize URLs. This guide will take you step-by-step, and explain how each part of the URL regex works, and how to spot different types of URLs yourself.  
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Going forward, we will go over the make up of each component that creates a readable URL: Anchors, Quantifiers, OR Operator, CHaracter C Lasses, Flags, Grouping and Capturing, Bracket Expressions, Greedy and Lazy March, Boundaries, Back-references, and Look-ahead/Look-behind assertions. 
 
 ## Table of Contents
 
+- [Regex Components](#regex-components)
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
 - [OR Operator](#or-operator)
@@ -22,7 +23,11 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Regex Components
 
+The URL regex is made up of the following components:(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/)
+
 ### Anchors
+
+Anchors are like bookends -- they mark the beginning and end of a regex's search within a string. In the case of URLs, the (^) marks the start of the string, and the ($) marks the end. Essentially, we are telling the web adress to start looking at ^, and stop looking at $; The string inbetween is the relevant component. This helps to ensure that the entire string is looked at for a match against the defined pattern. This anchoring mechanism is crucial for precicely identiftying URLs within a large body of text, and providing results without overlooking any part of the URL. 
 
 ### Quantifiers
 
