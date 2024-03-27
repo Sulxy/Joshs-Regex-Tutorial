@@ -6,7 +6,7 @@ In this URL-Regex-Tutorial, you will learn how to validate the URL regular expre
 The URL regex is made up of the following components:(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/).
 Upon completion of this tutorial, you should have an elevated understanding of how the URL regex functions, and a deeper knowledge of its parts.
 
-[Github Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a).
+[Github Gist](https://gist.github.com/Sulxy/b5acb69369796d9e8554fb298016a55a)
 
 
 ## Table of Contents:
